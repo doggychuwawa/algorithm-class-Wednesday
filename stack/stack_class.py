@@ -42,13 +42,13 @@ def reverse_string(statement):
     print("\n[1] PUSH 단계 --------------")
     st = ArrayStack(len(statement))
     for ch in statement:
-        st.puch(ch)
+        st.push(ch)
     print("\n[2] POP단계 --------------------")
     out = []
     while not st.is_empty():
         out.append(st.pop())
     result = ''.join(out)
-    print(f"\n[3] 최종 결과 : [result]")
+    print(f"\n[3] 최종 결과 : {result}")
     return result
 
 #테스트하기
