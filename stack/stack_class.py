@@ -2,10 +2,10 @@
 ##################################
 
 class ArrayStack :
-    def__init__(self, capacity):
-    self.capacity = capacity
-    self.array = [None] * self.capacity
-    self.top = -1
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.array = [None] * self.capacity
+        self.top = -1
 
     def is_empty(self):
         return self.top == -1
@@ -38,12 +38,12 @@ class ArrayStack :
     def size(self):
         return self.top + 1
 #스택 클래스를 이용한한 문자열을 거꾸로 뒤집집어 출력하는 프로그램
-def reverse_string(statment):
+def reverse_string(statement):
     print("\n[1] PUSH 단계 --------------")
     st = ArrayStack(len(statement))
     for ch in statement:
         st.puch(ch)
-    print("\n[1] POP단계 --------------------")
+    print("\n[2] POP단계 --------------------")
     out = []
     while not st.is_empty():
         out.append(st.pop())
@@ -59,5 +59,5 @@ def test_reverse():
         got = reverse_string(s)
 
 
-if__name__ == "__main__":
+if __name__ == "__main__":
     test_reverse()
