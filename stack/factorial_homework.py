@@ -1,7 +1,7 @@
 #############################################################################
 #  시스템 스택 호출과 재귀함수를 이용한 팩토리얼 계산 콘솔 인터렉티브 프로그램 
-#  작성자: 김현서
-#  작성일: 2025-09-28
+#  작성자: 심찬희
+#  작성일: 2025-10-01
 #############################################################################
 
 import time
@@ -9,7 +9,7 @@ import time
 # 반복문 기반 팩토리얼
 def factorial_iter(n: int) -> int:
     if n < 0:
-        raise ValueError("오튜")
+        raise ValueError("오류")
     result = 1
     for k in range(2, n + 1):
         result *= k
@@ -50,7 +50,7 @@ def main():
         if choice in ["1", "2", "3"]:
             n_str = input("n 값을 입력하세요: ").strip()
             if not n_str.isdigit():
-                print("⚠️ 오류: 정수를 입력하세요.")
+                print("오류: 정수를 입력하세요.")
                 continue
             n = int(n_str)
 
